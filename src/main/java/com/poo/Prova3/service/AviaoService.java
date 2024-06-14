@@ -1,12 +1,12 @@
-package com.poo.sts.Exemplo.service;
+package com.poo.Prova3.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.poo.sts.Exemplo.model.Aviao;
-import com.poo.sts.Exemplo.repository.AviaoRepository;
+import com.poo.Prova3.model.Aviao;
+import com.poo.Prova3.repository.AviaoRepository;
 
 @Service
 public class AviaoService {

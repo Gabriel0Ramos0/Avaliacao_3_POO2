@@ -1,4 +1,4 @@
-package com.poo.sts.Exemplo.model;
+package com.poo.Prova3.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

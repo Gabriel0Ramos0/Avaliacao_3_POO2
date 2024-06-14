@@ -1,10 +1,10 @@
-package com.poo.sts.Exemplo;
+package com.poo.Prova3;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ExemploApplicationTests {
+class Prova3ApplicationTests {
 
 	@Test
 	void contextLoads() {

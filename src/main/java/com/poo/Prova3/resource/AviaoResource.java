@@ -1,4 +1,4 @@
-package com.poo.sts.Exemplo.resource;
+package com.poo.Prova3.resource;
 
 import java.util.List;
 
@@ -10,29 +10,35 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.poo.sts.Exemplo.model.Passageiro;
-import com.poo.sts.Exemplo.service.PassageiroService;
+import com.poo.Prova3.model.Aviao;
+import com.poo.Prova3.service.AviaoService;
 
 @RestController
-@RequestMapping ("/passageiro")
-public class PassageiroResource {
+@RequestMapping ("/aviao")
+public class AviaoResource {
 	
 	@Autowired
-	PassageiroService service;
+	AviaoService service;
 	
 	@GetMapping
-	public List<Passageiro> listaTodos(){
-		return service.listaTodosPassageiros();
+	public List<Aviao> listarTodos(){
+		return service.listarTodosAvioes();
 	}
 	
-	@GetMapping("/{id}")
-	public Passageiro buscarPorCodigo(@PathVariable Integer id){
+	@GetMapping ("/{id}")
+	public Aviao buscarPorCodigo(@PathVariable Integer id){
 		return service.buscaPoCodigo(id);
 	}
 	
+	@GetMapping("/nome/{nome}")
+	public Aviao buscarPorNome(@PathVariable String nome){
+		return service.buscaPorNome(nome);
+	}
+	
 	@PostMapping
-	public Passageiro cadastra(@RequestBody Passageiro p) {
-		return service.inserePassageiro(p);
-	}	
+	public Aviao cadastra (@RequestBody Aviao a) {
+		return service.insereAviao(a);
+	}
+	
 	
 }

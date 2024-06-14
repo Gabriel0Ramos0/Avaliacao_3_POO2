@@ -1,12 +1,12 @@
-package com.poo.sts.Exemplo.service;
+package com.poo.Prova3.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.poo.sts.Exemplo.model.Passageiro;
-import com.poo.sts.Exemplo.repository.PassageiroRepository;
+import com.poo.Prova3.model.Passageiro;
+import com.poo.Prova3.repository.PassageiroRepository;
 
 @Service
 public class PassageiroService {

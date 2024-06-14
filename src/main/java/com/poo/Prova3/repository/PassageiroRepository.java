@@ -1,8 +1,8 @@
-package com.poo.sts.Exemplo.repository;
+package com.poo.Prova3.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.poo.sts.Exemplo.model.Passageiro;
+import com.poo.Prova3.model.Passageiro;
 
 public interface PassageiroRepository extends JpaRepository<Passageiro, Integer>{
 	
