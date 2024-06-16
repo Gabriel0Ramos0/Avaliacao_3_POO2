@@ -30,9 +30,9 @@ public class AviaoResource {
 		return service.buscaPoCodigo(id);
 	}
 	
-	@GetMapping("/nome/{nome}")
-	public Aviao buscarPorNome(@PathVariable String nome){
-		return service.buscaPorNome(nome);
+	@GetMapping("/modelo/{modelo}")
+	public Aviao buscarPorModelo(@PathVariable String modelo){
+		return service.buscaPorModelo(modelo);
 	}
 	
 	@PostMapping

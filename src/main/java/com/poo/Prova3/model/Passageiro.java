@@ -16,6 +16,12 @@ public class Passageiro {
 
 	@Column
 	private String nome;
+	
+	@Column
+	private Integer rg;
+	
+	@Column
+	private Integer cpf;
 
 	@ManyToOne
 	private Aviao aviao;
@@ -24,16 +30,17 @@ public class Passageiro {
 
 	}
 
-	public Passageiro(Integer id, String nome, Aviao aviao) {
-		super();
+	public Passageiro(Integer id, String nome, Integer rg, Integer cpf, Aviao aviao) {
 		this.id = id;
 		this.nome = nome;
+		this.rg = rg;
+		this.cpf = cpf;
 		this.aviao = aviao;
 	}
 
 	@Override
 	public String toString() {
-		return "Usuario [id=" + id + ", nome=" + nome + ", aviao=" + aviao + "]";
+		return "Passageiro [id=" + id + ", nome=" + nome + ", rg=" + rg + ", cpf=" + cpf + ", aviao=" + aviao + "]";
 	}
 
 	public Integer getId() {
@@ -52,6 +59,22 @@ public class Passageiro {
 		this.nome = nome;
 	}
 
+	public Integer getRg() {
+		return rg;
+	}
+
+	public void setRg(Integer rg) {
+		this.rg = rg;
+	}
+
+	public Integer getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(Integer cpf) {
+		this.cpf = cpf;
+	}
+
 	public Aviao getAviao() {
 		return aviao;
 	}
@@ -59,4 +82,5 @@ public class Passageiro {
 	public void setAviao(Aviao aviao) {
 		this.aviao = aviao;
 	}
+
 }

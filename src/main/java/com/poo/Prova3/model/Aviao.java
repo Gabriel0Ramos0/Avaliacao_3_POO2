@@ -13,36 +13,87 @@ public class Aviao {
 	private Integer id;
 	
 	@Column
-	private String nome;
+	private String modelo;
+	
+	@Column
+	private Integer anoFabricacao;
+	
+	@Column
+	private String categoria;
+	
+	@Column
+	private String tipoVooAutorizado;
+	
+	@Column
+	private String situacaoDificuldade;
 	
 	public Aviao() {
-		//teste de git push
+		
 	}
-	
-	public Aviao(int id, String nome) {
+
+	public Aviao(Integer id, String modelo, Integer anoFabricacao, String categoria, String tipoVooAutorizado,
+			String situacaoDificuldade) {
 		this.id = id;
-		this.nome = nome;
+		this.modelo = modelo;
+		this.anoFabricacao = anoFabricacao;
+		this.categoria = categoria;
+		this.tipoVooAutorizado = tipoVooAutorizado;
+		this.situacaoDificuldade = situacaoDificuldade;
 	}
 
 	@Override
 	public String toString() {
-		return "Nome: " + getNome();
+		return "Aviao [id=" + id + ", modelo=" + modelo + ", anoFabricacao=" + anoFabricacao + ", categoria="
+				+ categoria + ", tipoVooAutorizado=" + tipoVooAutorizado + ", situacaoDificuldade="
+				+ situacaoDificuldade + "]";
 	}
 
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
-	
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	
-	public String getNome() {
-		return nome;
+
+	public String getModelo() {
+		return modelo;
 	}
-	
-	public void setNome(String nome) {
-		this.nome = nome;
+
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+
+	public Integer getAnoFabricacao() {
+		return anoFabricacao;
+	}
+
+	public void setAnoFabricacao(Integer anoFabricacao) {
+		this.anoFabricacao = anoFabricacao;
+	}
+
+	public String getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
+	}
+
+	public String getTipoVooAutorizado() {
+		return tipoVooAutorizado;
+	}
+
+	public void setTipoVooAutorizado(String tipoVooAutorizado) {
+		this.tipoVooAutorizado = tipoVooAutorizado;
+	}
+
+	public String getSituacaoDificuldade() {
+		return situacaoDificuldade;
+	}
+
+	public void setSituacaoDificuldade(String situacaoDificuldade) {
+		this.situacaoDificuldade = situacaoDificuldade;
 	}
 		
 }

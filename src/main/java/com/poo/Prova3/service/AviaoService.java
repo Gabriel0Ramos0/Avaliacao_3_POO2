@@ -26,8 +26,8 @@ public class AviaoService {
 		return repository.findById(id).orElse(null);
 	}
 	
-	public Aviao buscaPorNome(String nome) {
-		return repository.findByNome(nome);
+	public Aviao buscaPorModelo(String modelo) {
+		return repository.findByModelo(modelo);
 	}
 	
 	public void excluiAviao (Aviao a) {
