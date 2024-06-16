@@ -18,7 +18,7 @@ public class AviaoService {
 		return repository.save(a);
 	}
 	
-	public Aviao AlteraAviao (Aviao c) {
+	public Aviao alteraAviao(Aviao c) {
 		return repository.save(c);
 	}
 	

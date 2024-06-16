@@ -18,7 +18,7 @@ public class PassageiroService {
 		return repository.save(p);
 	}
 	
-	public Passageiro AlteraPassageiro (Passageiro p) {
+	public Passageiro alteraPassageiro (Passageiro p) {
 		return repository.save(p);
 	}
 	

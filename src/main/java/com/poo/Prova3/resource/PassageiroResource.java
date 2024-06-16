@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -53,6 +54,16 @@ public class PassageiroResource {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Ocorreu um erro ao cadastrar o passageiro.");
         }
     }
+	
+	@PutMapping("/atualizar")
+	public ResponseEntity<?> atualizarAviao(@RequestBody Passageiro passageiro) {
+		try {
+			service.alteraPassageiro(passageiro);
+			return ResponseEntity.ok("Passageiro Atualizado!");
+		} catch (Exception e) {
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Erro ao atualizar o Passageiro!");
+		}
+	}
 	
 	@DeleteMapping("/deletar/{id}")
     public ResponseEntity<?> deletarPassageiro(@PathVariable Integer id) {
