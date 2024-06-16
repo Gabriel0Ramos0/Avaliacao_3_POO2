@@ -22,7 +22,7 @@ public class AviaoService {
 		return repository.save(c);
 	}
 	
-	public Aviao buscaPoCodigo(Integer id) {
+	public Aviao buscaPorCodigo(Integer id) {
 		return repository.findById(id).orElse(null);
 	}
 	
@@ -30,8 +30,8 @@ public class AviaoService {
 		return repository.findByModelo(modelo);
 	}
 	
-	public void excluiAviao (Aviao a) {
-		repository.delete(a);
+	public void excluiAviao (Integer id) {
+		repository.deleteById(id);
 	}
 	
 	public List<Aviao> listarTodosAvioes(){

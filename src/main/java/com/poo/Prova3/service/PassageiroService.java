@@ -22,12 +22,12 @@ public class PassageiroService {
 		return repository.save(p);
 	}
 	
-	public Passageiro buscaPoCodigo(Integer id) {
+	public Passageiro buscaPorCodigo(Integer id) {
 		return repository.findById(id).orElse(null);
 	}
 	
-	public void excluiUsuario (Passageiro p) {
-		repository.delete(p);
+	public void excluiPassageiro (Integer id) {
+		repository.deleteById(id);
 	}
 	
 	public List<Passageiro> listaTodosPassageiros(){
