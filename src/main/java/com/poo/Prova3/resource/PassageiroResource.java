@@ -58,6 +58,9 @@ public class PassageiroResource {
 	@PutMapping("/atualizar")
 	public ResponseEntity<?> atualizarAviao(@RequestBody Passageiro passageiro) {
 		try {
+			if (passageiro.getNome() == null || passageiro.getRg() == null || passageiro.getCpf() == null) {
+                return ResponseEntity.badRequest().body("Todos os campos são obrigatórios para atualizar o passageiro.");
+            }
 			service.alteraPassageiro(passageiro);
 			return ResponseEntity.ok("Passageiro Atualizado!");
 		} catch (Exception e) {

@@ -72,6 +72,10 @@ public class AviaoResource {
 	@PutMapping("/atualizar")
 	public ResponseEntity<?> atualizarAviao(@RequestBody Aviao aviao) {
 		try {
+			if (aviao.getModelo() == null || aviao.getAnoFabricacao() == null || aviao.getCategoria() == null ||
+					aviao.getTipoVooAutorizado() == null || aviao.getSituacaoDificuldade() == null) {
+		            return ResponseEntity.badRequest().body("Todos os campos são obrigatórios para atualizar o avião.");
+		        }
 			service.alteraAviao(aviao);
 			return ResponseEntity.ok("Avião Atualizado!");
 		} catch (Exception e) {
